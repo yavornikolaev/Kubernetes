@@ -1,0 +1,13 @@
+[Unit]
+Description=Start minikube,dashboard and proxy for kubernetes
+After=network.target
+
+[Service]
+Type=oneshot
+User=b5zerk
+Group=b5zerk
+ExecStart=/home/b5zerk/minikube_start.sh
+WorkingDirectory=/home/b5zerk
+
+[Install]
+WantedBy=multi-user.target
